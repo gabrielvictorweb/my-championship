@@ -1,0 +1,54 @@
+version: '2.1'
+services:
+  app:
+    build:
+      context: src
+      dockerfile: .docker/Dockerfile
+    image: 'laravelapp'
+    ports:
+      - 4000:80
+    depends_on:
+      - db
+      - node
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - app-network
+  node:
+    build:
+      context: nodejs
+      dockerfile: nodejs/.docker/Dockerfile
+    entrypoint: .docker/entrypoint.sh
+    container_name: nodejs-container
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nodejs:/home/node/app
+    networks:
+      - app-network
+  migration:
+    image: 'laravelapp'
+    command: php artisan migrate
+    depends_on:
+      - app
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - app-network
+  db:
+    build: .docker/postgres
+    container_name: db-app
+    restart: always
+    tty: true
+    ports:
+      - "5432:5432"
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=db-app
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
