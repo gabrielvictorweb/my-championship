@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="118e9889-af0b-4284-a6ef-a1f365dc58eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16433" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16434" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16438" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/24625" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/24626" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/24630" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/pg_stat_tmp/db_0.stat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/pg_stat_tmp/db_16384.stat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/pg_stat_tmp/global.stat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.docker/dbdata/postmaster.pid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223019_create_table_championship.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/src/examples/calc.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/test/courses/courses.e2e-spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pelejas-api/app/Helpers/functions.php" afterDir="false" />
@@ -84,66 +71,9 @@
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/global.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/theme.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-laravel/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/1247" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/1247" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/1249" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/1249" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/1249_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/1249_fsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/1259" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/1259" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/16385" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16385" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/16386" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16386" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/16390" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/16390" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2224" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2224" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2579" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2579" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2604" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2604" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2606" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2606" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2608" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2608" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2610" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2610" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2656" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2656" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2657" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2657" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2658" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2658" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2659" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2659" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2662" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2662" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2663" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2663" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2664" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2664" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2665" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2665" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2666" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2666" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2667" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2667" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2673" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2673" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2674" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2674" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2678" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2678" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2679" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2679" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2703" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2703" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/2704" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/2704" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/3455" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/3455" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/5002" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/5002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/base/16384/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/base/16384/pg_internal.init" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/global/pg_control" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/global/pg_control" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/global/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/global/pg_internal.init" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/pg_stat/db_0.stat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/pg_stat/db_16384.stat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/pg_stat/global.stat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/pg_wal/000000010000000000000001" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/pg_wal/000000010000000000000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/dbdata/pg_xact/0000" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dbdata/pg_xact/0000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/nodejs/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Scripts/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Scripts/teste.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/65/fe/65fe121b01b53542df2842e7d99ad93b6b2ecb52" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/cache/data/65/fe/65fe121b01b53542df2842e7d99ad93b6b2ecb52" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/79/05/7905055115b11fda5577a57370edb05782ffb108" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/cache/data/79/05/7905055115b11fda5577a57370edb05782ffb108" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -16,15 +16,15 @@ class CreateTableGames extends Migration
         if (!Schema::hasTable('games')) {
             Schema::create('games', function (Blueprint $table) {
                 $table->id();
-                $table->tinyint('scoreFirstTeam');
-                $table->int('scorePointsFirstTeam')->nullable();
-                $table->tinyint('scoreSecondTeam');
-                $table->int('scorePointsSecondTeam')->nullable();
+                $table->tinyInteger('scoreFirstTeam');
+                $table->mediumInteger('scorePointsFirstTeam')->nullable();
+                $table->tinyInteger('scoreSecondTeam');
+                $table->mediumInteger('scorePointsSecondTeam')->nullable();
                 $table->enum('winner', ['firstTeam', 'secondTeam'])->default('firstTeam');
-                $table->tinyint('scoreFirstTeamPenalty')->nullable();
-                $table->tinyint('scoreSecondTeamPenalty')->nullable();
+                $table->tinyInteger('scoreFirstTeamPenalty')->nullable();
+                $table->tinyInteger('scoreSecondTeamPenalty')->nullable();
                 $table->unsignedBigInteger('championship_id');
-                $table->foreign('championship_id')->references('championship.id')->on('championship')->onDelete('cascade');
+                $table->foreign('championship_id')->references('id')->on('championship')->onDelete('cascade');
                 $table->enum('round', ['first', 'second', 'final'])->default('first');
                 $table->timestamps();
             });
