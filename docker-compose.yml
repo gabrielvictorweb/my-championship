@@ -17,7 +17,7 @@ services:
   node:
     build:
       context: reactjs
-      dockerfile: reactjs/.docker/Dockerfile
+      dockerfile: .docker/Dockerfile
     entrypoint: .docker/entrypoint.sh
     container_name: reactjs-container
     ports:
