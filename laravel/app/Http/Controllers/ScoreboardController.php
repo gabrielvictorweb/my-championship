@@ -128,7 +128,7 @@ class ScoreboardController extends BaseController
             // Salvando jogos
             Games::insert([$finalRound, ...$secondRound, ...$firstRound]);
 
-            return response()->json([], 201);
+            return response()->json(['id' => $championship->id], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => 'INTERNAL_ERROR'], 500);
         }
