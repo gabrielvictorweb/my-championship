@@ -11,10 +11,13 @@ interface Game {
     winner: string;
     scoreFirstTeam: number;
     scoreSecondTeam: number;
+    scoreFirstTeamPenalty: null | number;
+    scoreSecondTeamPenalty: null | number;
     firstTeamName: string;
     secondTeamName: string;
     round: string;
     name: string;
+    created_at: string;
 }
 
 interface Rounds {
@@ -52,12 +55,14 @@ const Championship: React.FC = () => {
 
                 if(!nextGame) return;
 
+                const dateGame = new Intl.DateTimeFormat('pt-BR', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(new Date(game.created_at));
+
                 matches.push({
                     "id": game.id,
-                    "name": `Quartas de Finais - Partida ${index + 1}`,
+                    "name": game.scoreFirstTeamPenalty ? `Decisão nos Pênaltis ${game.scoreFirstTeamPenalty} x ${game.scoreSecondTeamPenalty}` : '',
                     "nextMatchId": nextGame.id,
                     "tournamentRoundText": "Quartas de Final",
-                    "startTime": "2021-05-30",
+                    "startTime": dateGame,
                     "state": "SCORE_DONE",
                     "participants": [
                         {
@@ -85,12 +90,14 @@ const Championship: React.FC = () => {
 
                 if(!nextGame) return;
 
+                const dateGame = new Intl.DateTimeFormat('pt-BR', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(new Date(game.created_at));
+
                 matches.push({
                     "id": game.id,
-                    "name": `Semi-Finais - Partida ${index + 1}`,
+                    "name": game.scoreFirstTeamPenalty ? `Decisão nos Pênaltis ${game.scoreFirstTeamPenalty} x ${game.scoreSecondTeamPenalty}` : '',
                     "nextMatchId": nextGame.id,
                     "tournamentRoundText": "Semi-finais",
-                    "startTime": "2021-05-30",
+                    "startTime": dateGame,
                     "state": "SCORE_DONE",
                     "participants": [
                         {
@@ -114,12 +121,14 @@ const Championship: React.FC = () => {
             })
 
             rounds.final.forEach((game, index) => {
+                const dateGame = new Intl.DateTimeFormat('pt-BR', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(new Date(game.created_at));
+
                 matches.push({
                     "id": game.id,
-                    "name": `Finais`,
+                    "name": game.scoreFirstTeamPenalty ? `Decisão nos Pênaltis ${game.scoreFirstTeamPenalty} x ${game.scoreSecondTeamPenalty}` : '',
                     "nextMatchId": null,
-                    "tournamentRoundText": "Quartas de Final",
-                    "startTime": "2021-05-30",
+                    "tournamentRoundText": "Finais",
+                    "startTime": dateGame,
                     "state": "SCORE_DONE",
                     "participants": [
                         {

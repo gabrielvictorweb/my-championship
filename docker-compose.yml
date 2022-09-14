@@ -26,9 +26,9 @@ services:
       - ./reactjs:/home/node/app
     networks:
       - app-network
-  migration:
+  preconfig-laravel:
     image: 'laravelapp'
-    command: php artisan migrate
+    entrypoint: .docker/entrypoint.sh
     depends_on:
       - app
     volumes:

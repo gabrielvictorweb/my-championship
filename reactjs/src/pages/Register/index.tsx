@@ -21,7 +21,9 @@ const Register:React.FC = () => {
 
     }
 
-    const handleTeam = () => {
+    const handleTeam = (e: React.FormEvent) => {
+        e.preventDefault();
+
         if(teams.includes(input)){
             messageError("Não é possivél inserir 2 Times com o mesmo nome!");
             return;
@@ -56,7 +58,7 @@ const Register:React.FC = () => {
                 teams
             });
 
-            history(`/championship/${data.id}`);
+            history(`/campeonato/${data.id}`);
         } catch (e) {
             messageError("Ocorreu um erro ao salvar o campeonato!");
         }
@@ -82,12 +84,14 @@ const Register:React.FC = () => {
         <>
             <TitleSection text="Cadastre o Campeonato"/>
             <Container>
-                <Form onSubmit={handleForm}>
+                <Form onSubmit={handleTeam}>
                     <Input required onChange={handleInputChampionship} value={championship} placeholder="Ex: Compa do Mundo" label="Nome do Campeonato"/>
                     <div className="ds-flex">
                         <Input onChange={handleInput} value={input} placeholder="Ex: PSD" label="Adicione 8 times"/>
-                        <Button type="button" onClick={handleTeam}>Adicionar</Button>
+                        <Button type="submit" onClick={handleTeam}>Adicionar</Button>
                     </div>
+                </Form>
+                <Form onSubmit={handleForm}>
                     <ul className="list">
                         {teams.map((team, index) => (
                             <li key={index}>{team}</li>

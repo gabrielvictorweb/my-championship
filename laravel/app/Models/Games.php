@@ -46,15 +46,15 @@ class Games extends Model
         return [
             "scoreFirstTeam" => $scoreboard['firstTeam'],
             "scoreSecondTeam" => $scoreboard['secondTeam'],
-            "scoreFirstTeamPenalty" => !isset($penalty['firstTeam']) ?? null,
-            "scoreSecondTeamPenalty" => !isset($penalty['secondTeam']) ?? null,
+            "scoreFirstTeamPenalty" => $penalty !== null ? $penalty['firstTeam'] : null,
+            "scoreSecondTeamPenalty" => $penalty !== null ? $penalty['secondTeam'] : null,
             "winner" => $winner
         ];
     }
 
     public static function getPenalty($firstTeam, $secondTeam)
     {
-        if($firstTeam !== $secondTeam) return [];
+        if($firstTeam !== $secondTeam) return null;
 
         $control = true;
         $scoreboard = null;

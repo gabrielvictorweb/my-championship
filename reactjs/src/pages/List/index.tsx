@@ -26,7 +26,7 @@ const List:React.FC = () => {
     const { page: currentPage } = useParams();
 
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-        history(`/championships/${value}`);
+        history(`/campeonatos/${value}`);
     };
 
     const getChampionships = async (page?: number) => {
@@ -63,7 +63,7 @@ const List:React.FC = () => {
                 )}
 
                 {(championships && championships.length > 0) && championships.map(championship => (
-                    <Link key={championship.id} to={`/championship/${championship.id}`}>
+                    <Link key={championship.id} to={`/campeonato/${championship.id}`}>
                         <Box>
                             <h1>{championship.id} - {championship.name}</h1>
                         </Box>

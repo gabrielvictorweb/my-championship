@@ -31,7 +31,8 @@ class ScoreboardController extends BaseController
     public function find($id)
     {
         try{
-            $game = Games::select('games.id', 'championships.name', 'games.winner', 'games.scoreFirstTeam', 'games.scoreSecondTeam', 'firstTeamName', 'secondTeamName', 'round')
+            $game = Games::select('games.id', 'championships.created_at', 'championships.name', 'games.winner', 'games.scoreFirstTeam',
+                'games.scoreSecondTeam', 'scoreFirstTeamPenalty', 'scoreSecondTeamPenalty', 'firstTeamName', 'secondTeamName', 'round')
                 ->join('championships', 'games.championship_id', '=', 'championships.id')
                 ->where('games.championship_id', '=', $id)
                 ->get()
@@ -39,7 +40,7 @@ class ScoreboardController extends BaseController
 
             return response()->json(['rounds' => $game], 200);
         } catch (\Exception $e) {
-            return response()->json(['error' => 'INTERNAL_ERROR'], 500);
+            return response()->json(['error' => $e->getMessage()], 500);
         }
     }
 
@@ -51,6 +52,7 @@ class ScoreboardController extends BaseController
             $validator = Validator::make($data, [
                 'championship' => 'required',
                 'teams' => 'required|array|size:8',
+                'teams.*' => 'distinct'
             ]);
 
             if ($validator->fails()) {
