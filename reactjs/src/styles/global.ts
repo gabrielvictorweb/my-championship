@@ -17,7 +17,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
-    line-height: 1.8;
     letter-spacing: 1px;
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;

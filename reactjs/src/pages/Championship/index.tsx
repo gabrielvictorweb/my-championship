@@ -3,6 +3,8 @@ import {Match, SingleEliminationBracket, SVGViewer} from "@g-loot/react-tourname
 import useWindowSize, {Size} from "../../hooks/useWindow/useWindow";
 import {useParams} from "react-router-dom";
 import {api} from "../../services/api";
+import Container from "../../components/Container";
+import TitleSection from "../../components/TitleSection";
 
 interface Game {
     id: number;
@@ -12,6 +14,7 @@ interface Game {
     firstTeamName: string;
     secondTeamName: string;
     round: string;
+    name: string;
 }
 
 interface Rounds {
@@ -150,17 +153,22 @@ const Championship: React.FC = () => {
 
     if(matchesState.length === 0) return <></>;
 
+    const nameChampionship = rounds ? rounds.first[0].name : 'Carregando...';
+
     return (
         <>
-            <SingleEliminationBracket
-                matches={matchesState}
-                matchComponent={Match}
-                svgWrapper={({ children, ...props }) => (
-                    <SVGViewer width={finalWidth} height={finalHeight} {...props}>
-                        {children}
-                    </SVGViewer>
-                )}
-            />
+            <TitleSection text={`Campeonato: ${nameChampionship}`}/>
+            <Container>
+                <SingleEliminationBracket
+                    matches={matchesState}
+                    matchComponent={Match}
+                    svgWrapper={({ children, ...props }) => (
+                        <SVGViewer width={finalWidth} height={finalHeight} {...props}>
+                            {children}
+                        </SVGViewer>
+                    )}
+                />
+            </Container>
         </>
     );
 }

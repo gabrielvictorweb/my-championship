@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="118e9889-af0b-4284-a6ef-a1f365dc58eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reactjs/src/pages/List/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactjs/src/pages/Register/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/Container/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/Container/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/TitleSection/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactjs/src/components/TitleSection/styles.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/src/examples/calc.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/test/courses/courses.e2e-spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pelejas-api/app/Helpers/functions.php" afterDir="false" />
@@ -76,6 +78,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactjs/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/pages/Championship/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/pages/Championship/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/pages/List/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/pages/List/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/styles/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/styles/global.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,13 +257,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/reactjs/src/pages/Register" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/reactjs/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/reactjs/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/reactjs/src/components" />
       <recent name="$PROJECT_DIR$/reactjs/src/pages/Register" />
       <recent name="$PROJECT_DIR$/.docker" />
     </key>

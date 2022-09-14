@@ -6,12 +6,15 @@ import ScrollToTop from './components/ScrollToTop';
 import Championship from "./pages/Championship";
 import List from "./pages/List";
 import Register from "./pages/Register";
+import Container from "./components/Container";
 
 function App () {
     return (
         <div className="App">
             <BrowserRouter>
-                <h1>My Championship</h1>
+                <Container>
+                    <h1>Meu Campeonato</h1>
+                </Container>
                 <ScrollToTop/>
                 <Routes>
                     <Route path="/championship/:id" element={<Championship />}/>
@@ -19,7 +22,7 @@ function App () {
                     <Route path="/register" element={<Register />}/>
                 </Routes>
             </BrowserRouter>
-            {/*<GlobalStyle/>*/}
+            <GlobalStyle/>
         </div>
     );
 }

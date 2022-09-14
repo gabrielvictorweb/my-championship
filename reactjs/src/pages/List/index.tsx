@@ -1,5 +1,6 @@
 import React from 'react';
 import { api } from "../../services/api";
+import Container from "../../components/Container";
 
 interface Championships {
     id: number;
@@ -33,7 +34,11 @@ const List:React.FC = () => {
         getChampionships();
     }, []);
 
-    return (<>List</>)
+    return (
+        <Container>
+            List
+        </Container>
+    )
 }
 
 export default List;

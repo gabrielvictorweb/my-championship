@@ -31,7 +31,7 @@ class ScoreboardController extends BaseController
     public function find($id)
     {
         try{
-            $game = Games::select('games.id', 'games.winner', 'games.scoreFirstTeam', 'games.scoreSecondTeam', 'firstTeamName', 'secondTeamName', 'round')
+            $game = Games::select('games.id', 'championships.name', 'games.winner', 'games.scoreFirstTeam', 'games.scoreSecondTeam', 'firstTeamName', 'secondTeamName', 'round')
                 ->join('championships', 'games.championship_id', '=', 'championships.id')
                 ->where('games.championship_id', '=', $id)
                 ->get()
