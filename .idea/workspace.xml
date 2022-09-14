@@ -72,7 +72,7 @@
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/theme.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-laravel/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/.docker/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.docker/entrypoint.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
