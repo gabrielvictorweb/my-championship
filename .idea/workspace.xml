@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="118e9889-af0b-4284-a6ef-a1f365dc58eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/.docker/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/Championships.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Models/Games.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/src/examples/calc.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../estudos-nest/test/courses/courses.e2e-spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pelejas-api/app/Helpers/functions.php" afterDir="false" />
@@ -74,13 +71,8 @@
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/global.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/theme.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-laravel/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223019_create_table_championship.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223019_create_table_championship.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/65/fe/65fe121b01b53542df2842e7d99ad93b6b2ecb52" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/cache/data/65/fe/65fe121b01b53542df2842e7d99ad93b6b2ecb52" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/79/05/7905055115b11fda5577a57370edb05782ffb108" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/framework/cache/data/79/05/7905055115b11fda5577a57370edb05782ffb108" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/logs/laravel.log" afterDir="false" />
@@ -315,7 +307,7 @@
       <workItem from="1662857388504" duration="20708000" />
       <workItem from="1662999898284" duration="12058000" />
       <workItem from="1663112623513" duration="110000" />
-      <workItem from="1663112890228" duration="2825000" />
+      <workItem from="1663112890228" duration="5365000" />
     </task>
     <servers />
   </component>

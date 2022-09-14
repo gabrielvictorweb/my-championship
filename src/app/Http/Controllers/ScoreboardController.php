@@ -5,110 +5,124 @@ namespace App\Http\Controllers;
 use App\Models\Championships;
 use App\Models\Games;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class ScoreboardController extends BaseController
 {
-    public function save()
+    public function save(Request $request)
     {
-        $championshipName = 'Campeonato';
+        try {
+            $data = $request->all();
 
-        $championship = new Championships();
-        $championship->name = $championshipName;
-        $championship->save();
+            $validator = Validator::make($data, [
+                'championship' => 'required',
+                'teams' => 'required|array|size:8',
+            ]);
 
-        $teams = array(
-            'Time 1',
-            'Time 2',
-            'Time 3',
-            'Time 4',
-            'Time 5',
-            'Time 6',
-            'Time 7',
-            'Time 8',
-        );
-        shuffle($teams);
+            if ($validator->fails()) {
+                return response()->json(['errors' => $validator->errors()->all()], 400);
+            }
 
-        // First Round
-        $firstRound = array();
-        $i = 0;
-        while ($i < 8){
-            $firstTeam = $teams[$i];
-            $secondTeam = $teams[$i + 1];
+            $championship = new Championships();
+            $championship->name = $data['championship'];
+            $championship->save();
+
+            // Embaralhando times
+            $teams = $data['teams'];
+            shuffle($teams);
+
+            // First Round
+            $firstRound = array();
+            $i = 0;
+            while ($i < 8){
+                $firstTeam = $teams[$i];
+                $secondTeam = $teams[$i + 1];
+
+                $scoreboard = Games::getScoreboard();
+                $scoreboardInfos = [
+                    "championship_id" => $championship->id,
+                    "firstTeamName" => $firstTeam,
+                    "secondTeamName" => $secondTeam,
+                    "round" => 'first',
+                    ...$scoreboard
+                ];
+
+                $firstRound[] = $scoreboardInfos;
+                $secondRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
+
+                $i = $i + 2;
+            }
+
+            // Second Round
+            $secondRound = array();
+            $i = 0;
+            while($i < 4) {
+                $next = $i - 1;
+                $firstTeam = $secondRoundTeams[$next + 1];
+                $secondTeam = $secondRoundTeams[$next + 2];
+
+                $scoreboard = Games::getScoreboard();
+                $scoreboardInfos = [
+                    "championship_id" => $championship->id,
+                    "firstTeamName" => $firstTeam,
+                    "secondTeamName" => $secondTeam,
+                    "round" => 'second',
+                    ...$scoreboard
+                ];
+
+                $secondRound[] = $scoreboardInfos;
+                $finalRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
+
+                $i = $i + 2;
+            }
+
+            # Final Round
+            $firstTeam = $finalRoundTeams[0];
+            $secondTeam = $finalRoundTeams[1];
 
             $scoreboard = Games::getScoreboard();
-            $scoreboardInfos = [
+            $finalRound = [
                 "championship_id" => $championship->id,
                 "firstTeamName" => $firstTeam,
                 "secondTeamName" => $secondTeam,
+                "round" => 'final',
                 ...$scoreboard
             ];
-            $firstRound[] = $scoreboardInfos;
-            $secondRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
 
-            $i = $i + 2;
+            // Salvando jogos
+            Games::insert([$finalRound, ...$secondRound, ...$firstRound]);
+
+            return response()->json([], 201);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'INTERNAL_ERROR'], 500);
         }
-
-        Games::insert($firstRound);
-
-        // Second Round
-        $secondRound = array();
-        $i = 0;
-        while($i < 4) {
-            $next = $i - 1;
-            $firstTeam = $secondRoundTeams[$next + 1];
-            $secondTeam = $secondRoundTeams[$next + 2];
-
-            $scoreboard = Games::getScoreboard();
-            $scoreboardInfos = [
-                "championship_id" => $championship->id,
-                "firstTeamName" => $firstTeam,
-                "secondTeamName" => $secondTeam,
-                "round" => 'second',
-                ...$scoreboard
-            ];
-            $secondRound[] = $scoreboardInfos;
-            $finalRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
-
-            $i = $i + 2;
-        }
-
-        Games::insert($secondRound);
-
-        # Final Round
-        $firstTeam = $finalRoundTeams[0];
-        $secondTeam = $finalRoundTeams[1];
-
-        $scoreboard = Games::getScoreboard();
-        $finalRound = [
-            "championship_id" => $championship->id,
-            "firstTeamName" => $firstTeam,
-            "secondTeamName" => $secondTeam,
-            "round" => 'final',
-            ...$scoreboard
-        ];
-
-        Games::insert($finalRound);
-
-        $games = Games::select('id')->get();
-
-        return response()->json(['scoreboard' => $games]);
     }
 
     public function find($id)
     {
-        $game = Games::select('games.id', 'firstTeamName', 'secondTeamName', 'round')
-            ->join('championships', 'games.championship_id', '=', 'championships.id')
-            ->where('games.championship_id', '=', $id)
-            ->get();
+        try{
+            $game = Games::select('games.id', 'firstTeamName', 'secondTeamName', 'round')
+                ->join('championships', 'games.championship_id', '=', 'championships.id')
+                ->where('games.championship_id', '=', $id)
+                ->get();
 
-        return response()->json(['game' => $game]);
+            return response()->json(['game' => $game]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'INTERNAL_ERROR'], 500);
+        }
     }
 
     public function index()
     {
-        $championships = Championships::select('id', 'name', 'created_at')
-            ->get();
+        try{
+            $championships = Championships::select('id', 'name', 'created_at')
+                ->orderBy('created_at', 'DESC')
+                ->get();
 
-        return response()->json(['championships' => $championships]);
+            return response()->json(['championships' => $championships]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'INTERNAL_ERROR'], 500);
+        }
     }
 }
