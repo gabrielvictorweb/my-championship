@@ -2,13 +2,13 @@
 
 # Execução
 
-Com o <b>Docker Compose</b> instalado em seu computador, navegue até a pasta do projeto execute o seguinte comando:
+Com o <b>Docker Compose</b> instalado em seu computador, navegue até a pasta do projeto e execute o seguinte comando:
 
 ```shell
 $ docker-compose build
 ```
 
-E logo depois, o seguinte comando para iniciar os serviços:
+Logo depois, o seguinte comando para iniciar os serviços:
 ```shell
 $ docker-compose up
 ```
