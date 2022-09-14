@@ -2,65 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Championships;
+use App\Models\Games;
 use Illuminate\Routing\Controller as BaseController;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class ScoreboardController extends BaseController
 {
-    private static function getScore()
+    public function save()
     {
-        $process = new Process(['python3', '../app/Scripts/teste.py']);
-        $process->run();
+        $championshipName = 'Campeonato';
 
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
+        $championship = new Championships();
+        $championship->name = $championshipName;
+        $championship->save();
 
-        return json_decode($process->getOutput(), true);
-    }
-
-    private static function getScoreboard()
-    {
-        $scoreboard = ScoreboardController::getScore();
-        $penalty = ScoreboardController::getPenalty($scoreboard['firstTeam'], $scoreboard['secondTeam']);
-
-        if($scoreboard['firstTeam'] > $scoreboard['secondTeam']){
-            $teamWin = 'firstTeam';
-        } else if($scoreboard['firstTeam'] < $scoreboard['secondTeam']){
-            $teamWin = 'secondTeam';
-        } else if ($penalty['firstTeam'] > $penalty['secondTeam']){
-            $teamWin = 'firstTeam';
-        } else {
-            $teamWin = 'secondTeam';
-        }
-
-        return [
-            "scoreboard" => $scoreboard,
-            "penalty" => $penalty,
-            "teamWin" => $teamWin
-        ];
-    }
-
-    private static function getPenalty($firstTeam, $secondTeam)
-    {
-        if($firstTeam !== $secondTeam) return [];
-
-        $control = true;
-        $scoreboard = null;
-        while($control == true){
-            $scoreboard = ScoreboardController::getScore();
-
-            if($scoreboard['firstTeam'] !== $scoreboard['secondTeam']){
-                $control = false;
-            }
-        }
-
-        return $scoreboard;
-    }
-
-    public function index()
-    {
         $teams = array(
             'Time 1',
             'Time 2',
@@ -73,24 +28,29 @@ class ScoreboardController extends BaseController
         );
         shuffle($teams);
 
+        // First Round
         $firstRound = array();
         $i = 0;
         while ($i < 8){
             $firstTeam = $teams[$i];
             $secondTeam = $teams[$i + 1];
 
-            $scoreboard = $this::getScoreboard();
+            $scoreboard = Games::getScoreboard();
             $scoreboardInfos = [
-                "firstTeam" => $firstTeam,
-                "secondTeam" => $secondTeam,
+                "championship_id" => $championship->id,
+                "firstTeamName" => $firstTeam,
+                "secondTeamName" => $secondTeam,
                 ...$scoreboard
             ];
             $firstRound[] = $scoreboardInfos;
-            $secondRoundTeams[] = $scoreboardInfos[$scoreboard['teamWin']];
+            $secondRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
 
             $i = $i + 2;
         }
 
+        Games::insert($firstRound);
+
+        // Second Round
         $secondRound = array();
         $i = 0;
         while($i < 4) {
@@ -98,33 +58,57 @@ class ScoreboardController extends BaseController
             $firstTeam = $secondRoundTeams[$next + 1];
             $secondTeam = $secondRoundTeams[$next + 2];
 
-            $scoreboard = $this::getScoreboard();
+            $scoreboard = Games::getScoreboard();
             $scoreboardInfos = [
-                "firstTeam" => $firstTeam,
-                "secondTeam" => $secondTeam,
+                "championship_id" => $championship->id,
+                "firstTeamName" => $firstTeam,
+                "secondTeamName" => $secondTeam,
+                "round" => 'second',
                 ...$scoreboard
             ];
             $secondRound[] = $scoreboardInfos;
-            $finalRoundTeams[] = $scoreboardInfos[$scoreboard['teamWin']];
+            $finalRoundTeams[] = $scoreboardInfos[$scoreboard['winner'] . 'Name'];
 
             $i = $i + 2;
         }
+
+        Games::insert($secondRound);
 
         # Final Round
         $firstTeam = $finalRoundTeams[0];
         $secondTeam = $finalRoundTeams[1];
 
-        $scoreboard = $this::getScoreboard();
-        $finalScore = [
-            "firstTeam" => $firstTeam,
-            "secondTeam" => $secondTeam,
+        $scoreboard = Games::getScoreboard();
+        $finalRound = [
+            "championship_id" => $championship->id,
+            "firstTeamName" => $firstTeam,
+            "secondTeamName" => $secondTeam,
+            "round" => 'final',
             ...$scoreboard
         ];
 
-        return response()->json(['scoreboard' => [
-            'firstRound' => $firstRound,
-            'secondRound' => $secondRound,
-            'finalRound' => $finalScore
-        ]]);
+        Games::insert($finalRound);
+
+        $games = Games::select('id')->get();
+
+        return response()->json(['scoreboard' => $games]);
+    }
+
+    public function find($id)
+    {
+        $game = Games::select('games.id', 'firstTeamName', 'secondTeamName', 'round')
+            ->join('championships', 'games.championship_id', '=', 'championships.id')
+            ->where('games.championship_id', '=', $id)
+            ->get();
+
+        return response()->json(['game' => $game]);
+    }
+
+    public function index()
+    {
+        $championships = Championships::select('id', 'name', 'created_at')
+            ->get();
+
+        return response()->json(['championships' => $championships]);
     }
 }

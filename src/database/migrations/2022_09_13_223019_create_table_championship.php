@@ -13,8 +13,8 @@ class CreateTableChampionship extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('championship')) {
-            Schema::create('championship', function (Blueprint $table) {
+        if (!Schema::hasTable('championships')) {
+            Schema::create('championships', function (Blueprint $table) {
                 $table->id();
                 $table->string('name');
                 $table->timestamps();
@@ -29,6 +29,6 @@ class CreateTableChampionship extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('championship');
+        Schema::dropIfExists('championships');
     }
 }

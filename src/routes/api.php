@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/scoreboard/generate', [ScoreboardController::class, 'index']);
+Route::get('/scoreboard/generate', [ScoreboardController::class, 'save']);
+Route::get('/scoreboard/championship/{id}', [ScoreboardController::class, 'find']);
+Route::get('/scoreboard/championship', [ScoreboardController::class, 'index']);

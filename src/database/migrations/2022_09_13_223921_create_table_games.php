@@ -16,6 +16,8 @@ class CreateTableGames extends Migration
         if (!Schema::hasTable('games')) {
             Schema::create('games', function (Blueprint $table) {
                 $table->id();
+                $table->string('firstTeamName', 60);
+                $table->string('secondTeamName', 60);
                 $table->tinyInteger('scoreFirstTeam');
                 $table->mediumInteger('scorePointsFirstTeam')->nullable();
                 $table->tinyInteger('scoreSecondTeam');
@@ -24,7 +26,7 @@ class CreateTableGames extends Migration
                 $table->tinyInteger('scoreFirstTeamPenalty')->nullable();
                 $table->tinyInteger('scoreSecondTeamPenalty')->nullable();
                 $table->unsignedBigInteger('championship_id');
-                $table->foreign('championship_id')->references('id')->on('championship')->onDelete('cascade');
+                $table->foreign('championship_id')->references('id')->on('championships')->onDelete('cascade');
                 $table->enum('round', ['first', 'second', 'final'])->default('first');
                 $table->timestamps();
             });
