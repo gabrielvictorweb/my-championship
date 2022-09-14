@@ -2,7 +2,7 @@ version: '2.1'
 services:
   app:
     build:
-      context: src
+      context: laravel
       dockerfile: .docker/Dockerfile
     image: 'laravelapp'
     ports:
@@ -11,19 +11,19 @@ services:
       - db
       - node
     volumes:
-      - ./src:/var/www/html
+      - ./laravel:/var/www/html
     networks:
       - app-network
   node:
     build:
-      context: nodejs
-      dockerfile: nodejs/.docker/Dockerfile
+      context: reactjs
+      dockerfile: reactjs/.docker/Dockerfile
     entrypoint: .docker/entrypoint.sh
-    container_name: nodejs-container
+    container_name: reactjs-container
     ports:
       - "3000:3000"
     volumes:
-      - ./nodejs:/home/node/app
+      - ./reactjs:/home/node/app
     networks:
       - app-network
   migration:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - app
     volumes:
-      - ./src:/var/www/html
+      - ./laravel:/var/www/html
     networks:
       - app-network
   db:

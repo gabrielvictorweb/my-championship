@@ -34,9 +34,10 @@ class ScoreboardController extends BaseController
             $game = Games::select('games.id', 'games.winner', 'games.scoreFirstTeam', 'games.scoreSecondTeam', 'firstTeamName', 'secondTeamName', 'round')
                 ->join('championships', 'games.championship_id', '=', 'championships.id')
                 ->where('games.championship_id', '=', $id)
-                ->get();
+                ->get()
+                ->groupBy('round');
 
-            return response()->json(['game' => $game], 200);
+            return response()->json(['rounds' => $game], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => 'INTERNAL_ERROR'], 500);
         }
