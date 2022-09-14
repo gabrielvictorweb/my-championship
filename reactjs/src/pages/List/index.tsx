@@ -70,7 +70,9 @@ const List:React.FC = () => {
                     </Link>
                 ))}
 
-                <Pagination count={infoResults ? infoResults.totalPages : 0} page={page} onChange={handleChange} />
+                {(infoResults && infoResults.totalPages > 0) && (
+                    <Pagination count={infoResults.totalPages} page={page} onChange={handleChange} />
+                )}
             </Container>
         </>
     )

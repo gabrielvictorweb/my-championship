@@ -12,5 +12,7 @@ export const Menu = styled.ul`
     &:hover {
       font-weight: bold;
     }
+
+    margin-top: 20px;
   }
 `;
