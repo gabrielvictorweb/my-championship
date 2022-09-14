@@ -72,135 +72,9 @@
       <change afterPath="$PROJECT_DIR$/../pelejas-frontend/src/styles/theme.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-laravel/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/.docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/.docker/entrypoint.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/src/setupTests.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodejs/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/entrypoint.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/vhost.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/ScoreboardController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Championships.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Games.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Scripts/teste.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bootstrap/cache/packages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bootstrap/cache/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/sanctum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223019_create_table_championship.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/migrations/2022_09_13_223921_create_table_games.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/65/fe/65fe121b01b53542df2842e7d99ad93b6b2ecb52" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/cache/data/79/05/7905055115b11fda5577a57370edb05782ffb108" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/sessions/kLlUVnVfP9FSPTxfYJ8mfaIVMABeeXLy1HnyBrxJ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/sessions/m6iEilTtJT0tEy9jjpaw0hnmCa3zMWQu9FgtYfuD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/sessions/uxgn6Vx2RBslhPaEqagmaSqiGsbtElXPTK844OG8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/0373776feac9eed24dd270b6f315537d7b76f53b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/d21bc1965d8c501e5e18921c4eb8ea6ec1e5686e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/framework/views/d2e42784ed5faf2cdd25326d19520d6eefaae9e4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/logs/laravel.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +87,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
